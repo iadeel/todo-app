@@ -37,23 +37,25 @@ const TodoMain = () => {
     const filteredArray = todoItems.filter((item) => item.id != todoId);
     settodoItems(filteredArray);
   };
- 
 
-
-  const editThisTodo = (todoId) =>{
-    var newTitle = prompt("Enter New Value of Todo :")
-    const editedArr = todoItems.map((item) => {
-      if (item.id === todoId) {
-        // settodoItems.title(newTitle)
-        return { ...item, title: newTitle };
-      } else {
-        // settodoItems.title(item.title)
-        return item;
-      }
-    });
-    settodoItems(editedArr);
-    
-  } ;
+  const editThisTodo = (todoId) => {
+    var newTitle = prompt("Enter New Value of Todo :");
+    if (newTitle.length > 2) {
+      const editedArr = todoItems.map((item) => {
+        if (item.id === todoId) {
+          // settodoItems.title(newTitle)
+          return { ...item, title: newTitle };
+        } else {
+          // settodoItems.title(item.title)
+          return item;
+        }
+      });
+      settodoItems(editedArr);
+    } else {
+      // console.log("code nahi chala")
+      alert("Invalid Input!! Write a Todo Item please!!");
+    }
+  };
 
   const setTodosInLocalStorage = () => {
     const myTodos = JSON.stringify(todoItems);
