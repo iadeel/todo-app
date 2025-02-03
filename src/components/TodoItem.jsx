@@ -6,7 +6,7 @@ import { FiEdit } from "react-icons/fi";
 const TodoItem = ({title}) => {
   return (
     <>
-      <div className="todoitem w-full bg-[#ecfcff]  rounded-md p-[10px] flex justify-between items-center">
+      <div className="todoitem w-full bg-white border  rounded-md p-[10px] flex justify-between items-center">
         <h1>{title}</h1>
         <div className="buttons flex items-center">
           <FiEdit size={25} />
