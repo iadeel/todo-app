@@ -27,9 +27,10 @@ const TodoItem = ({todoItem, markTodoAsCompleted, deleteThisTodo,editThisTodo })
           )}
           </button>
           <button className="cursor-pointer" onClick={() => {
-            var removed = prompt("Do you want to delete the item?")
-            removed = removed.toLowerCase()
-            if(removed == "yes"){
+            var removed = confirm("The Item will be deleted Permanently?")
+            // var removed = prompt("Do you want to delete the item?")
+            // removed = removed.toLowerCase()
+            if(removed){
               deleteThisTodo(todoItem?.id);
               alert("Item will be Deleted!")
             }else{
