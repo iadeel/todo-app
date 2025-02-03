@@ -73,7 +73,7 @@ const TodoMain = () => {
   return (
     <>
       {/* bg-[#c7f7ff] */}
-      <div className="main justify-between h-[550px] w-[800px] gap-[20px] flex flex-col  bg-white rounded-4xl border-2 py-[30px] px-[10px] items-center">
+      <div className="main justify-between h-[550px] sm:w-[200px]  md:w-[600px] lg:w-[800px] gap-[20px] flex flex-col  bg-white rounded-4xl border-2 py-[30px] px-[10px] items-center">
         <div className="todoItems flex flex-col items-center gap-3.5 h-[400px] overflow-auto w-[92%] py-[10]">
           <h1 className="text-[30px] font-bold">Todo App</h1>
           {/* <h2 className="text-[15px] text-left">Todo Items for Today</h2> */}
